@@ -1,0 +1,155 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: hsl(0, 0%, 95%);
+
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  display: flex;
+}
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.container {
+  background-color: hsl(31, 77%, 52%);
+  width: 922px;
+  max-width: 100%;
+  /* border: 1px solid black; */
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  box-shadow: -1em 1em 3em rgba(0, 0, 0, 0.1), 1em 1em 3em rgba(0, 0, 0, 0.1);
+  height: 502px;
+  max-height: 100%;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.card {
+  padding: 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-details-container {
+  padding: 1rem 0;
+}
+
+.card-details-container h1 {
+  color: hsl(0, 0%, 95%);
+  font-size: 2.2rem;
+}
+
+.card-details-container p {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5rem;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  padding: 0;
+  margin: 0;
+}
+
+.card-1 {
+  background-color: hsl(31, 77%, 52%);
+  /* border: 1px solid black; */
+  overflow: hidden;
+}
+
+.btn-1 {
+  color: hsl(31, 77%, 52%);
+}
+
+.card-2 {
+  background-color: hsl(184, 100%, 22%);
+  /* border: 1px solid red; */
+  overflow: hidden;
+}
+
+.btn-2 {
+  color: hsl(184, 100%, 22%);
+}
+
+.card-3 {
+  background-color: hsl(179, 100%, 13%);
+  /* border: 1px solid white; */
+  overflow: hidden;
+}
+
+.btn-3 {
+  color: hsl(179, 100%, 13%);
+}
+
+.card-title {
+  font-family: "Big Shoulders Display", cursive;
+}
+
+.btn {
+  box-sizing: border-box;
+  padding: 0.8rem 2rem;
+  width: 145px;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.8rem;
+  transition: 1s background-color ease-in;
+}
+
+.btn:hover {
+  box-sizing: border-box;
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
+  border: 2px solid hsl(0, 0%, 95%);
+  transition: 1s background-color ease-in;
+}
+
+@media screen and (max-width: 670px) {
+  .container {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    width: 90%;
+    /* grid-template-rows: 1fr; */
+    height: auto;
+    max-height: auto;
+  }
+  .card {
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 275px;
+  }
+  .card-details-container {
+    padding: 1rem 2rem 0 0;
+  }
+  .card-details-container h1 {
+    font-size: 2rem;
+  }
+  .card-details-container p {
+    line-height: 1.2rem;
+    font-size: 13px;
+  }
+}
